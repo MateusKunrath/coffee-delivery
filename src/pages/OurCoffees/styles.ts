@@ -49,14 +49,12 @@ export const IntroContent = styled.div`
 `
 
 export const IntroInfos = styled.div`
-  flex: 1;
-
   display: flex;
   flex-direction: column;
 
   gap: 4rem;
 
-  > div {
+  & > div:first-child {
     display: flex;
     flex-direction: column;
 
@@ -80,4 +78,36 @@ export const IntroInfos = styled.div`
   }
 `
 
-export const ItemsContainer = styled.div``
+export const ItemsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`
+
+export const ItemsColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+`
+
+export const Item = styled.div`
+  display: flex;
+  align-items: center;
+
+  gap: 0.75rem;
+`
+
+export const Icon = styled.div`
+  width: 2rem;
+  height: 2rem;
+  background: red;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    color: ${(props) => props.theme['gray-50']};
+  }
+`
